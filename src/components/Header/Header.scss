@@ -1,0 +1,34 @@
+@use '../../shared/helpers' as *;
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: rem(24);
+    min-height: rem(100);
+    padding-inline: rem(20);
+
+    &__brand {
+        font-family: var(--font-family-accent);
+        font-size: rem(32);
+        color: var(--color-purple);
+        text-decoration: none;
+        transition: opacity 0.3s;
+
+        &:hover {
+            scale: (1.05);
+        }
+    }
+
+    &__actions {
+        justify-self: end;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(12);
+        white-space: nowrap;
+    }
+
+    &__nav {
+        justify-self: center;
+    }
+}

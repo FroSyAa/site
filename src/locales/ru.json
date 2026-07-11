@@ -1,0 +1,27 @@
+{
+    "header": {
+        "brand": "BlankPortfolio",
+        "login": "Авторизация"
+    },
+    "navigation": {
+        "aboutMe": "Обо мне",
+        "experience": "Опыт",
+        "skills": "Навыки",
+        "contacts": "Контакты"
+    },
+    "auth": {
+        "title": "Авторизация",
+        "email": "Почта",
+        "sendCode": "Получить код"
+    },
+    "common": {
+        "toggleLanguage": "Переключить язык"
+    },
+    "hero": {
+        "hello": "Привет!",
+        "me": "Я Никита!",
+        "firstMessage": "Фуллстек разработчик",
+        "secondMessage": "Я могу разработать твой проект",
+        "thirdMessage": "Я воплощу твои идеи в код"
+    }
+}

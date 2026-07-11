@@ -1,0 +1,27 @@
+{
+    "header": {
+        "brand": "BlankPortfolio",
+        "login": "Authorization"
+    },
+    "navigation": {
+        "aboutMe": "About Me",
+        "experience": "Experience",
+        "skills": "Skills",
+        "contacts": "Contacts"
+    },
+    "auth": {
+        "title": "Authorization",
+        "email": "Email",
+        "sendCode": "Get the code"
+    },
+    "common": {
+        "toggleLanguage": "Toggle language"
+    },
+    "hero": {
+        "hello": "Hello!",
+        "me": "I'm Blank!",
+        "firstMessage": "Fullstack developer",
+        "secondMessage": "I can develop your project",
+        "thirdMessage": "I bring your ideas to life in code"
+    }
+}

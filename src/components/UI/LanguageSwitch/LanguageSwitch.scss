@@ -1,0 +1,32 @@
+@use '../../../shared/helpers/' as *;
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(40);
+    transition: all 0.3s ease;
+    color: var(color-light-purple);
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--color-light-purple);
+
+    svg {
+        width: rem(40);
+        height: rem(40);
+        display: block;
+        fill: currentColor;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        color: var(--color-purple);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-purple);
+        outline-offset: 2px;
+    }
+}

@@ -1,0 +1,57 @@
+@use '../../shared/helpers/' as *;
+
+.hero {
+    background: var(--color-black);
+    min-height: rem(650);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: rem(32);
+    overflow: hidden;
+    padding: rem(40) rem(24);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        max-width: rem(560);
+        padding-left: 10%;
+    }
+
+    &__visual {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__h1 {
+        font-size: rem(52);
+        font-family: var(--font-family-accent);
+        margin: 0;
+    }
+
+    &__h2 {
+        font-size: rem(42);
+        font-weight: 450;
+        margin: 0;
+        min-height: rem(50); 
+    }
+
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+    }
+}
+
+@media (max-width: rem(900)) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        &__visual {
+            width: min(rem(360), 82vw);
+        }
+    }
+}
