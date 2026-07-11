@@ -19,7 +19,8 @@
     },
     "hero": {
         "hello": "Hello!",
-        "me": "I'm Blank!",
+        "me": "I'm ",
+        "name": "Blank!",
         "firstMessage": "Fullstack developer",
         "secondMessage": "I can develop your project",
         "thirdMessage": "I bring your ideas to life in code"

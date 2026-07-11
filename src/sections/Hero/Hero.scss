@@ -26,16 +26,25 @@
     }
 
     &__h1 {
-        font-size: rem(52);
+        font-size: rem(64);
         font-family: var(--font-family-accent);
         margin: 0;
+        &__name {
+            color: var(--color-purple);
+            font-size: rem(54);
+        }
     }
 
     &__h2 {
         font-size: rem(42);
-        font-weight: 450;
         margin: 0;
-        min-height: rem(50); 
+        min-height: rem(84);
+    }
+
+    &__h3 {
+        font-size: rem(36);
+        margin: 0;
+        min-height: rem(72)
     }
 
     canvas {
