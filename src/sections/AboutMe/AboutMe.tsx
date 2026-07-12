@@ -6,10 +6,8 @@ export function AboutMe () {
     const { t } = useTranslation();
 
     return (
-        <section id="aboutMe" className="about-me">
-            <div className="photo">
-                
-            </div>
+        <section className= "about-me" id="aboutMe">
+            <div className="about-me__visual" role='img' aria-label={'aboutMe.photoAlt'}></div>
             <div className="about-me__content">
                 <h1 className="about-me__h1">
                     {t('aboutMe.about')}

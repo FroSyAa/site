@@ -35,4 +35,19 @@
         font-family: var(--font-family-base);
         text-align: justify;
     }
+
+    &__visual {
+        position: relative;
+        width: rem(640);
+        height: rem(640);
+
+            background-image: url('../../../public/images/MyPhotoWithHead.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+
+            &:hover {
+                background-image: url('../../../public/images/MyPhoto.jpg');
+            }   
+    }
 }
