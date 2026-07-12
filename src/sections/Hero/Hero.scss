@@ -28,6 +28,7 @@
         margin: 0;
         font-family: var(--font-family-accent);
         font-size: rem(64);
+        color: var(--color-gray-light);
         &__name {
             background: linear-gradient(
                 90deg,
@@ -47,6 +48,7 @@
         margin: 0;
         font-size: rem(42);
         min-height: rem(120);
+        color: var(--color-light-purple);
     }
 
     canvas {

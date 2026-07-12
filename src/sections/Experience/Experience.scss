@@ -1,0 +1,90 @@
+@use '../../shared/helpers/' as *;
+
+.experience {
+    background: var(--color-dark-1);
+    min-height: rem(720);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 4%;
+    position: relative;
+
+    &__timeline {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: rem(2);
+        background: var(--color-purple);
+        transform: translateX(-50%);
+    }
+
+    &__block {
+        position: relative;
+        padding: rem(30);
+
+        &:nth-child(odd) {
+            grid-column: 1;
+            padding-right: rem(40);
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: rem(-10);
+                top: 50%;
+                height: rem(20);
+                background: var(--color-purple);
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &:nth-child(even) {
+            grid-column: 2;
+            text-align: left;
+            padding-left: rem(40);
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: rem(-10);
+                top: 50%;
+                width: rem(20);
+                height: rem(20);
+                background: var(--color-purple);
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__date {
+        font-family: var(--font-family-accent);
+        font-size: rem(18);
+        color: var(--color-purple);
+        margin-bottom: rem(8);
+    }
+
+    &__position {
+        font-size: rem(24);
+        font-weight: 600;
+        color: var(--color-white);
+        margin-bottom: rem(12);
+    }
+
+    &__description {
+        font-size: rem(16);
+        color: var(--color-gray);
+        line-height: 1.6;
+    }
+
+    &__h1 {
+        margin: 0;
+        font-family: var(--font-family-accent);
+        font-size: rem(52);
+        text-align: center;
+        color: var(--color-purple);
+        grid-column: 1 / -1;
+    }
+}

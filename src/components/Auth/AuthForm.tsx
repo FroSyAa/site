@@ -34,7 +34,6 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
             />
 
             <Button 
-                variant="submit"  
                 type="submit" 
                 disabled={!email.trim()}
                 onClick={() => console.log("Отправка")}

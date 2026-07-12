@@ -5,7 +5,7 @@
     },
     "navigation": {
         "aboutMe": "About Me",
-        "experience": "Experience",
+        "experience": "Work experience",
         "skills": "Skills",
         "contacts": "Contacts"
     },
@@ -26,11 +26,31 @@
         "thirdMessage": "I bring your ideas to life in code!"
     },
     "aboutMe": {
-        "about": "About Me",
+        "title": "About Me",
         "me": "My name Nikita Shipunov, I'm 19 and currently a 3rd-year student at BSTU Voenmeh.",
         "firstText": "A backend developer at heart (frontend developer by appearance) and a clean architecture enthusiast.",
         "secondText": "In programming, I value system integrity and elegance; in life, I appreciate creative approaches and complex mechanics. Whether it's building intricate modpacks in Minecraft with Avarita or automating production chains in sandbox games — I thrive on processes where simple building blocks evolve into something complex and fully functional.",
         "thirdText": "Currently, I'm diving deep into the Node.js ecosystem, as I consider it the perfect blend of flexibility and structure for tackling demanding enterprise challenges. I design and maintain my own projects from scratch, always prioritizing clean architecture and long-term scalability.",
         "photoAlt": "There's a picture of me here"
+    },
+    "experience": {
+        "title": "Experience",
+        "items": [
+            {
+                "date": "2024 - present",
+                "position": "Backend Developer",
+                "description": "Development of microservices using NestJS, working with Kafka and Redis"
+            },
+            {
+                "date": "2023 - 2024",
+                "position": "Fullstack Developer",
+                "description": "Creation of web applications using React and Node.js"
+            },
+            {
+                "date": "2022 - 2023",
+                "position": "Junior Developer",
+                "description": "Learning web development basics and working on educational projects"
+            }
+        ]
     }
 }

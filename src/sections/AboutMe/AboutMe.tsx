@@ -7,10 +7,10 @@ export function AboutMe () {
 
     return (
         <section className= "about-me" id="aboutMe">
-            <div className="about-me__visual" role='img' aria-label={'aboutMe.photoAlt'}></div>
+            <div className="about-me__visual" role='img' aria-label={t('aboutMe.photoAlt')}></div>
             <div className="about-me__content">
                 <h1 className="about-me__h1">
-                    {t('aboutMe.about')}
+                    {t('aboutMe.title')}
                 </h1>
                 <h3 className="about-me__h3">
                     {t('aboutMe.me')} <br />

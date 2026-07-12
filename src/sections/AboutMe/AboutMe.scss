@@ -1,7 +1,7 @@
 @use '../../shared/helpers/' as *;
 
 .about-me {
-    background: var(--color-dark-2);
+    background: var(--color-dark-1);
     min-height: rem(720);
     display: grid;
     grid-template-columns: 1fr 1fr;
