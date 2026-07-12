@@ -2,13 +2,13 @@ import { useGLTF } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { useEffect, useMemo, useRef } from "react"
 import { Mesh, MeshStandardMaterial, Object3D, Vector3, type Group } from "three"
-import { getGlobalPointer } from "../hooks/useGlobalPointer"
+import { getGlobalPointer } from "../../hooks/useGlobalPointer"
 
 const MODEL_PATH = '/3D-models/MinecraftHead.glb'
 
 const ROTATION_STRENGTH = 1.3
-const LOOK_DISTANCE = 1.2
-const ROTATION_SMOOTHING = 0.12
+const LOOK_DISTANCE = 1.9
+const ROTATION_SMOOTHING = 0.075
 
 export default function MinecraftHead() {
     const { scene } = useGLTF(MODEL_PATH)

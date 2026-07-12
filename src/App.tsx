@@ -1,11 +1,13 @@
 import { Header } from './components/Header';
+import { AboutMe } from './sections/AboutMe/AboutMe';
 import { Hero } from './sections/Hero/Hero';
 
 function App() {
   return (
-    <div className="menu">
+    <div className="app">
       <Header />
       <Hero />
+      <AboutMe />
     </div>
   );
 }

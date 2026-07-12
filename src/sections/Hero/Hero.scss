@@ -1,14 +1,13 @@
 @use '../../shared/helpers/' as *;
 
 .hero {
-    background: var(--color-black);
-    min-height: rem(650);
+    background: var(--color-dark-1);
+    min-height: rem(720);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    gap: rem(32);
-    overflow: hidden;
+    gap: rem(27);
     padding: rem(40) rem(24);
 
     &__content {
@@ -26,25 +25,28 @@
     }
 
     &__h1 {
-        font-size: rem(64);
-        font-family: var(--font-family-accent);
         margin: 0;
+        font-family: var(--font-family-accent);
+        font-size: rem(64);
         &__name {
-            color: var(--color-purple);
-            font-size: rem(54);
+            background: linear-gradient(
+                90deg,
+                rgba(177, 162, 255, 1) 0%,
+                rgba(94, 76, 212, 1) 25%,
+                rgba(177, 162, 255, 1) 100%
+            );
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 100%;
+            animation: gradientAnimation 8s ease-in-out infinite;
+            font-size: rem(64);
         }
     }
 
     &__h2 {
+        margin: 0;
         font-size: rem(42);
-        margin: 0;
         min-height: rem(120);
-    }
-
-    &__h3 {
-        font-size: rem(36);
-        margin: 0;
-        min-height: rem(100);
     }
 
     canvas {
@@ -62,5 +64,17 @@
         &__visual {
             width: min(rem(360), 82vw);
         }
+    }
+}
+
+@keyframes gradientAnimation {
+    0% { 
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

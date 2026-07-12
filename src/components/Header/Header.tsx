@@ -14,7 +14,7 @@ export function Header() {
     return (
         <>
             <header className="header">
-                <a className="header__brand" href="/" >
+                <a className="header__brand" href="/#" >
                     {t('header.brand')}
                 </a>
                 <div className="header__nav">

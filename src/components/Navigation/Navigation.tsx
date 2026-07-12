@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next';
 import './Navigation.scss';
 
 const NAV_ITEMS = [
-    { labelKey: 'navigation.aboutMe', href: '/about' },
-    { labelKey: 'navigation.experience', href: '/experience' },
-    { labelKey: 'navigation.skills', href: '/skills' },
-    { labelKey: 'navigation.contacts', href: '/contacts' },
+    { labelKey: 'navigation.aboutMe', href: '/#aboutMe' },
+    { labelKey: 'navigation.experience', href: '/#experience' },
+    { labelKey: 'navigation.skills', href: '/#skills' },
+    { labelKey: 'navigation.contacts', href: '/#contacts' },
 ];
 
 export function Navigation() {

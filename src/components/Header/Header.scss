@@ -1,22 +1,48 @@
 @use '../../shared/helpers' as *;
 
 .header {
+    background-color: var(--color-dark-header);
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     column-gap: rem(24);
-    min-height: rem(100);
+    min-height: rem(76);
     padding-inline: rem(20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
 
     &__brand {
         font-family: var(--font-family-accent);
+        transition: opacity 0.5s;
+        background: linear-gradient(
+                90deg,
+                rgba(177, 162, 255, 1) 0%,
+                rgba(94, 76, 212, 1) 25%,
+                rgba(172, 83, 219, 1) 50%,
+                rgba(177, 162, 255, 1) 100%
+            );
+        background-clip: text;
+        color: transparent;
+        background-size: 300% 100%;
+        animation: gradientAnimation 8s ease-in-out infinite;
         font-size: rem(32);
-        color: var(--color-purple);
-        text-decoration: none;
-        transition: opacity 0.3s;
 
         &:hover {
-            scale: (1.05);
+            scale: (1.075);
+            background: linear-gradient(
+                90deg,
+                rgba(177, 162, 255, 1) 0%,
+                rgba(94, 76, 212, 1) 25%,
+                rgba(172, 83, 219, 1) 50%,
+                rgba(255, 107, 107, 1) 75%,
+                rgba(177, 162, 255, 1) 100%
+            );
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 100%;
+            animation: gradientAnimation 8s ease-in-out infinite;
         }
     }
 
@@ -30,5 +56,17 @@
 
     &__nav {
         justify-self: center;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% { 
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

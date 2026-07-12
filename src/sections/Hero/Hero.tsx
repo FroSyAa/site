@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Html } from '@react-three/drei'; // Импортируем Html для удобного позиционирования лоадера
 import { useTranslation } from 'react-i18next';
 import { useTypewriterCycle } from '../../hooks/useTypewriterCycle';
-import Scene from '../../3Dcomponents/Scene';
+import Scene from '../../components/3D/Scene';
 import './Hero.scss';
 
 const WORD_KEYS = [
