@@ -5,31 +5,82 @@
     min-height: rem(720);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    padding: 4% 4%;
+    gap: rem(48);
+    align-items: start;
+    padding: 6% 4%;
 
-    &__hard-skills {
-        
-    }
-
-    &__soft-skills {
-
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__h1 {
-        margin: 0;
+        margin: 0 0 rem(40);
         font-family: var(--font-family-accent);
         font-size: rem(52);
         text-align: center;
         color: var(--color-purple);
     }
 
-    &__h3 {
-        margin: 0;
-        font-size: rem(22);
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        width: 100%;
+        max-width: rem(480);
+    }
+
+    &__card {
+        background: var(--color-dark-2);
+        border: rem(1) solid var(--color-light-purple);
+        border-radius: rem(14);
+        padding: rem(20) rem(24);
+        transition: border-color var(--transition-duration) ease,
+                    transform var(--transition-duration) ease,
+                    box-shadow var(--transition-duration) ease;
+
+        &--hard:hover {
+            border-color: var(--color-purple);
+            transform: translateX(rem(18));
+            box-shadow: rem(8) 0 rem(24) rgb(177 162 255 / 15%);
+        }
+
+        &--soft:hover {
+            border-color: var(--color-purple);
+            transform: translateX(rem(-18));
+            box-shadow: rem(-8) 0 rem(24) rgb(177 162 255 / 15%);
+        }
+    }
+
+    &__card-category {
+        font-family: var(--font-family-accent);
+        font-size: rem(15);
+        color: var(--color-purple);
+        margin-bottom: rem(8);
+    }
+
+    &__card-items {
+        font-size: rem(15);
+        color: var(--color-light);
+        line-height: 1.5;
+    }
+
+    &__card-title {
+        font-family: var(--font-family-accent);
+        font-size: rem(16);
+        color: var(--color-purple);
+        margin-bottom: rem(8);
+    }
+
+    &__card-text {
+        font-size: rem(14);
         color: var(--color-light-purple);
-        font-family: var(--font-family-base);
-        text-align: justify;
+        line-height: 1.6;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(56);
     }
 }

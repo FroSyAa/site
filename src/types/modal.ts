@@ -1,7 +1,7 @@
-export type ModalType = 'auth';
+export type ModalType = never;
 
 export interface ModalData {
-   [key: string]: unknown; 
+   [key: string]: unknown;
 }
 
 export interface ModalContextType {

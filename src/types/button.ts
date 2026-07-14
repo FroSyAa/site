@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-type ButtonVariant = 'auth' | 'primary' | 'submit'
+type ButtonVariant = 'primary' | 'submit'
 
 export interface ButtonProps {
     variant?: ButtonVariant;

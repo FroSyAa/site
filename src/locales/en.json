@@ -1,21 +1,12 @@
 {
     "header": {
-        "brand": "BlankPortfolio",
-        "login": "Authorization"
+        "brand": "BlankPortfolio"
     },
     "navigation": {
         "aboutMe": "About Me",
         "experience": "Work experience",
         "skills": "Skills",
         "contacts": "Contacts"
-    },
-    "auth": {
-        "title": "Authorization",
-        "email": "Email",
-        "sendCode": "Get code"
-    },
-    "common": {
-        "toggleLanguage": "Toggle language"
     },
     "hero": {
         "hello": "Hello!",
@@ -58,5 +49,70 @@
                 "description": "After stepping back from StudBot in May 2026, I started a new pet project — \"We\", an app that helps couples plan and diversify the time they spend together: shared activities, mini-games, geolocation, and other two-person mechanics. This time I'm deliberately building it as a proper microservice architecture rather than a monolith.\n\nSo far I've built an Auth Service, a User Service, and a Media Service backed by S3 for file storage, each with explicit API contracts defined up front. Instead of direct synchronous HTTP calls between services, communication runs through Kafka — so services stay decoupled and resilient to each other's downtime.\n\nFor me the project is mainly a testbed for distributed-systems concerns: service boundaries, contract design, eventual consistency, and object storage integration. The product side (games, geolocation, and the rest) is still being worked out; next up is building out the remaining services."
             }
         ]
+    },
+    "skills": {
+        "titleHard": "Hard Skills",
+        "titleSoft": "Soft Skills",
+        "hard": [
+            {
+                "category": "Backend languages",
+                "items": "Python, TypeScript, C/C++, SQL"
+            },
+            {
+                "category": "Backend frameworks",
+                "items": "aiogram (Telegram Bot API), NestJS (Fastify), Fastify"
+            },
+            {
+                "category": "Databases & storage",
+                "items": "PostgreSQL, MySQL, Redis, S3"
+            },
+            {
+                "category": "ORM & migrations",
+                "items": "SQLAlchemy 2.0 (async), Prisma ORM"
+            },
+            {
+                "category": "Async & queues / event bus",
+                "items": "asyncio, Kafka"
+            },
+            {
+                "category": "API & inter-service communication",
+                "items": "REST API, WebSockets, Protobuf"
+            },
+            {
+                "category": "Infrastructure & tools",
+                "items": "Docker, Docker Compose, Git (GitHub)"
+            },
+            {
+                "category": "Frontend (for my own projects and this site)",
+                "items": "HTML (HTML5), CSS (CSS3), SASS (SCSS), React"
+            }
+        ],
+        "soft": [
+            {
+                "title": "Autonomy and full product ownership",
+                "text": "I can take a project end to end — from architecture to production — and see it through on my own."
+            },
+            {
+                "title": "Fast, self-directed learning",
+                "text": "I pick up new stacks and approaches (like moving from a monolith to microservices) without a mentor — through docs, experiments, and refactoring."
+            },
+            {
+                "title": "Attention to architecture and detail",
+                "text": "I think through a system at the level of contracts, ownership boundaries, and fault tolerance — not just \"make it work\"."
+            },
+            {
+                "title": "Communication",
+                "text": "Clear spoken and written communication, easy to find common ground with different people, open to feedback."
+            },
+            {
+                "title": "Flexibility and teamwork",
+                "text": "Experience both building solo and fitting into someone else's processes and architecture as part of a team."
+            }
+        ]
+    },
+    "contacts": {
+        "contactTitle": "Let's build something together",
+        "contactText": "Currently open to new opportunities and interesting collaborations.",
+        "contactSecondText": "Do not hesitate to contact!"
     }
 }

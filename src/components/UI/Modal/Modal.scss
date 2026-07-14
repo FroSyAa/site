@@ -39,24 +39,3 @@
         }
     }
 }
-
-.auth-modal__content h2 {
-    margin-top: 0;
-    margin-bottom: rem(16); 
-    text-align: center;
-    font-family: var(--font-family-accent);
-}
-
-.auth-form {
-    display: grid;
-    gap: rem(12);
-}
-
-.auth-form input {
-    width: 100%;
-    border: rem(1) solid var(--color-light-purple);
-    border-radius: rem(8);
-    background-color: transparent;
-    color: var(--color-light);
-    padding: rem(10) rem(12);
-}
