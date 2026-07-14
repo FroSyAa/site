@@ -11,12 +11,12 @@
 .navigation-link {
     font-size: rem(18);
     font-family: var(--font-family-base);
-    color: var(--color-light-purple);
+    color: var(--text-secondary);
     white-space: nowrap;
     transition: 0.3s ease-in-out;
 
     &:hover {
-        color: var(--color-purple);
+        color: var(--accent);
         text-decoration: underline;
         text-underline-offset: rem(8);
     }

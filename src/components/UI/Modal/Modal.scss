@@ -13,10 +13,10 @@
     &__content {
         position: relative;
         width: min(rem(520), 100%);
-        border: rem(1) solid var(--color-purple);
+        border: rem(1) solid var(--accent);
         border-radius: rem(16);
-        background-color: var(--color-dark-1);
-        color: var(--color-light);
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
         padding: rem(32);
     }
 
@@ -29,12 +29,12 @@
         border: none;
         border-radius: 50%;
         background-color: transparent;
-        color: var(--color-light);
+        color: var(--text-primary);
         font-size: rem(32);
         line-height: 1;
 
         &:hover {
-            color: var(--color-purple);
+            color: var(--accent);
             transform: scale(1.3) 
         }
     }

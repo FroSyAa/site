@@ -1,7 +1,7 @@
 @use '../../shared/helpers/' as *;
 
 .about-me {
-    background: var(--color-dark-1);
+    background: var(--bg-elevated);
     min-height: rem(720);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,13 +24,13 @@
         font-family: var(--font-family-accent);
         font-size: rem(52);
         text-align: center;
-        color: var(--color-purple);
+        color: var(--accent);
     }
 
     &__h3 {
         margin: 0;
         font-size: rem(22);
-        color: var(--color-light-purple);
+        color: var(--text-secondary);
         font-family: var(--font-family-base);
         text-align: justify;
     }
@@ -39,7 +39,7 @@
         position: relative;
         width: rem(640);
         height: rem(640);
-        border: rem(2) solid var(--color-purple); 
+        border: rem(2) solid var(--accent);
         background-image: url('../../../public/images/MyPhotoWithHead.jpg');
         background-size: cover;
         background-position: center;

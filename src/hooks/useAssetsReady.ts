@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
-import { useProgress } from '@react-three/drei'
 
 function areImagesLoaded() {
     return Array.from(document.images).every((img) => img.complete)
 }
 
 export function useAssetsReady() {
-    const { active: threeAssetsLoading } = useProgress()
     const [windowLoaded, setWindowLoaded] = useState(document.readyState === 'complete')
     const [imagesLoaded, setImagesLoaded] = useState(false)
     const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -44,5 +42,5 @@ export function useAssetsReady() {
         }
     }, [])
 
-    return windowLoaded && imagesLoaded && fontsLoaded && !threeAssetsLoading
+    return windowLoaded && imagesLoaded && fontsLoaded
 }

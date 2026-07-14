@@ -1,7 +1,7 @@
 @use '../../shared/helpers' as *;
 
 .header {
-    background-color: var(--color-dark-header);
+    background-color: var(--bg-elevated);
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -18,10 +18,9 @@
         transition: opacity 0.5s;
         background: linear-gradient(
                 90deg,
-                rgba(177, 162, 255, 1) 0%,
-                rgba(94, 76, 212, 1) 25%,
-                rgba(172, 83, 219, 1) 50%,
-                rgba(177, 162, 255, 1) 100%
+                var(--accent) 0%,
+                var(--accent-shade) 50%,
+                var(--accent) 100%
             );
         background-clip: text;
         color: transparent;
@@ -33,11 +32,9 @@
             scale: (1.075);
             background: linear-gradient(
                 90deg,
-                rgba(177, 162, 255, 1) 0%,
-                rgba(94, 76, 212, 1) 25%,
-                rgba(172, 83, 219, 1) 50%,
-                rgba(255, 107, 107, 1) 75%,
-                rgba(177, 162, 255, 1) 100%
+                var(--accent-shade) 0%,
+                var(--accent) 50%,
+                var(--accent-shade) 100%
             );
             background-clip: text;
             color: transparent;
@@ -73,7 +70,7 @@
 
         &:hover,
         &:focus-visible {
-            background-color: rgb(177 162 255 / 12%);
+            background-color: color-mix(in srgb, var(--accent) 12%, transparent);
         }
     }
 
@@ -82,12 +79,12 @@
         width: rem(22);
         height: rem(2);
         border-radius: rem(2);
-        background-color: var(--color-light-purple);
+        background-color: var(--text-secondary);
         transition: background-color var(--transition-duration);
     }
 
     &__burger[aria-expanded='true'] &__burger-line {
-        background-color: var(--color-purple);
+        background-color: var(--accent);
     }
 
     &__mobile-nav {
@@ -111,7 +108,7 @@
             justify-content: center;
             grid-column: 1 / -1;
             padding-block: rem(16);
-            border-top: rem(1) solid rgb(177 162 255 / 20%);
+            border-top: rem(1) solid color-mix(in srgb, var(--accent) 20%, transparent);
 
             .navigation {
                 flex-direction: column;

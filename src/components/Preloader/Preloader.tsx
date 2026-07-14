@@ -1,8 +1,18 @@
 import './Preloader.scss';
 
-export function Preloader() {
+type PreloaderProps = {
+    compact?: boolean;
+    label?: string;
+};
+
+export function Preloader({ compact = false, label = 'Загрузка страницы' }: PreloaderProps) {
     return (
-        <div className="preloader" role="status" aria-live="polite" aria-label="Загрузка страницы">
+        <div
+            className={compact ? 'preloader preloader--compact' : 'preloader'}
+            role="status"
+            aria-live="polite"
+            aria-label={label}
+        >
             <div className="preloader__grid">
                 <span className="preloader__square preloader__square--1" />
                 <span className="preloader__square preloader__square--2" />

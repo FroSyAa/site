@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Html } from '@react-three/drei'; // Импортируем Html для удобного позиционирования лоадера
+import { Html } from '@react-three/drei';
 import { useTranslation } from 'react-i18next';
 import { useTypewriterCycle } from '../../hooks/useTypewriterCycle';
 import Scene from '../../components/3D/Scene';
+import { Preloader } from '../../components/Preloader';
 import './Hero.scss';
 
 const WORD_KEYS = [
@@ -32,7 +33,9 @@ export function Hero() {
             <div className="hero__visual" aria-hidden="true">
                 <Canvas camera={{ position: [0, 0, 8], fov: 35 }} dpr={[1, 2]} shadows>
                     <Suspense fallback={
-                        <Html center></Html>
+                        <Html center>
+                            <Preloader compact label="Загрузка 3D-модели" />
+                        </Html>
                     }>
                         <Scene />
                     </Suspense>

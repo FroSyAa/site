@@ -1,7 +1,7 @@
 @use '../../shared/helpers/' as *;
 
 .skills {
-    background: var(--color-dark-1);
+    background: var(--bg-elevated);
     min-height: rem(720);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,7 +20,7 @@
         font-family: var(--font-family-accent);
         font-size: rem(52);
         text-align: center;
-        color: var(--color-purple);
+        color: var(--accent);
     }
 
     &__list {
@@ -32,50 +32,55 @@
     }
 
     &__card {
-        background: var(--color-dark-2);
-        border: rem(1) solid var(--color-light-purple);
+        background: var(--bg-secondary);
+        border: rem(1) solid var(--text-secondary);
         border-radius: rem(14);
         padding: rem(20) rem(24);
         transition: border-color var(--transition-duration) ease,
                     transform var(--transition-duration) ease,
-                    box-shadow var(--transition-duration) ease;
+                    box-shadow var(--transition-duration) ease,
+                    background-color var(--transition-duration) ease;
+
+        &:nth-child(even) {
+            background: var(--bg-primary);
+        }
 
         &--hard:hover {
-            border-color: var(--color-purple);
+            border-color: var(--accent);
             transform: translateX(rem(18));
-            box-shadow: rem(8) 0 rem(24) rgb(177 162 255 / 15%);
+            box-shadow: rem(8) 0 rem(24) color-mix(in srgb, var(--accent) 15%, transparent);
         }
 
         &--soft:hover {
-            border-color: var(--color-purple);
+            border-color: var(--accent);
             transform: translateX(rem(-18));
-            box-shadow: rem(-8) 0 rem(24) rgb(177 162 255 / 15%);
+            box-shadow: rem(-8) 0 rem(24) color-mix(in srgb, var(--accent) 15%, transparent);
         }
     }
 
     &__card-category {
         font-family: var(--font-family-accent);
         font-size: rem(15);
-        color: var(--color-purple);
+        color: var(--accent);
         margin-bottom: rem(8);
     }
 
     &__card-items {
         font-size: rem(15);
-        color: var(--color-light);
+        color: var(--text-primary);
         line-height: 1.5;
     }
 
     &__card-title {
         font-family: var(--font-family-accent);
         font-size: rem(16);
-        color: var(--color-purple);
+        color: var(--accent);
         margin-bottom: rem(8);
     }
 
     &__card-text {
         font-size: rem(14);
-        color: var(--color-light-purple);
+        color: var(--text-secondary);
         line-height: 1.6;
     }
 
