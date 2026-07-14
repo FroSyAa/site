@@ -64,7 +64,7 @@ export default function MinecraftHead() {
         modelRef.current.quaternion.slerp(dummy.quaternion, ROTATION_SMOOTHING)
     })
 
-    return <primitive object={model} ref={modelRef} scale={6.2} />
+    return <primitive object={model} ref={modelRef} scale={5.5} />
 }
 
 useGLTF.preload(MODEL_PATH)
