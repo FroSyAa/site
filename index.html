@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlankPortfolio</title>
     <script>
@@ -14,6 +14,21 @@
         document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
+    <style>
+      :root, :root[data-theme='dark'] {
+        --bg-primary: #131313;
+        --accent: #B1A2FF;
+        --accent-secondary: #FCC472;
+      }
+      :root[data-theme='light'] {
+        --bg-primary: #FDF6EC;
+        --accent: #FBAE3C;
+        --accent-secondary: #B1A2FF;
+      }
+      html, body {
+        background: var(--bg-primary);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
