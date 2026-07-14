@@ -1,7 +1,6 @@
 {
     "header": {
         "brand": "BlankPortfolio",
-        "login": "Авторизация",
         "openMenu": "Открыть меню",
         "closeMenu": "Закрыть меню"
     },

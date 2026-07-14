@@ -28,7 +28,7 @@
     &__h1 {
         margin: 0;
         font-family: var(--font-family-accent);
-        font-size: rem(64);
+        font-size: fluid(96, 68);
         color: var(--text-heading);
         &__name {
             background: linear-gradient(
@@ -41,13 +41,13 @@
             color: transparent;
             background-size: 300% 100%;
             animation: gradientAnimation 8s ease-in-out infinite;
-            font-size: rem(64);
+            font-size: fluid(96, 68);
         }
     }
 
     &__h2 {
         margin: 0;
-        font-size: rem(42);
+        font-size: fluid(64, 32);
         min-height: rem(120);
         color: var(--text-secondary);
     }
@@ -67,6 +67,10 @@
         &__content {
             padding-left: 0;
             margin-inline: auto;
+        }
+
+        &__h2 {
+            min-height: rem(80);
         }
     }
 }

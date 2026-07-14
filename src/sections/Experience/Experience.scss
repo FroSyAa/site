@@ -9,7 +9,7 @@
     &__h1 {
         margin: 0 0 rem(56);
         font-family: var(--font-family-accent);
-        font-size: rem(52);
+        font-size: fluid(52, 32);
         text-align: center;
         color: var(--accent);
     }
