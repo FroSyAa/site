@@ -57,6 +57,68 @@
     &__nav {
         justify-self: center;
     }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(5);
+        width: rem(36);
+        height: rem(36);
+        border: none;
+        background-color: transparent;
+        border-radius: rem(4);
+        transition: background-color var(--transition-duration);
+
+        &:hover,
+        &:focus-visible {
+            background-color: rgb(177 162 255 / 12%);
+        }
+    }
+
+    &__burger-line {
+        display: block;
+        width: rem(22);
+        height: rem(2);
+        border-radius: rem(2);
+        background-color: var(--color-light-purple);
+        transition: background-color var(--transition-duration);
+    }
+
+    &__burger[aria-expanded='true'] &__burger-line {
+        background-color: var(--color-purple);
+    }
+
+    &__mobile-nav {
+        display: none;
+    }
+
+    @include tablet {
+        grid-template-columns: auto 1fr;
+        padding-inline: rem(20);
+
+        &__nav {
+            display: none;
+        }
+
+        &__burger {
+            display: inline-flex;
+        }
+
+        &__mobile-nav {
+            display: flex;
+            justify-content: center;
+            grid-column: 1 / -1;
+            padding-block: rem(16);
+            border-top: rem(1) solid rgb(177 162 255 / 20%);
+
+            .navigation {
+                flex-direction: column;
+                gap: rem(16);
+            }
+        }
+    }
 }
 
 @keyframes gradientAnimation {

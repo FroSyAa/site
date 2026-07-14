@@ -35,7 +35,7 @@ export function Contacts() {
     const { t } = useTranslation();
 
     return (
-        <section className="contacts">
+        <section className="contacts" id="contacts">
             <div className="contacts__content">
                 <h1 className="contacts__h1">{t('contacts.contactTitle')}</h1>
                 <h2 className="contacts__h2">{t('contacts.contactFirstText')}</h2>

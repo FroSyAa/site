@@ -8,16 +8,21 @@ const NAV_ITEMS = [
     { labelKey: 'navigation.contacts', href: '/#contacts' },
 ];
 
-export function Navigation() {
+interface NavigationProps {
+    onNavigate?: () => void;
+}
+
+export function Navigation({ onNavigate }: NavigationProps) {
     const { t } = useTranslation();
 
     return (
         <nav className="navigation">
             {NAV_ITEMS.map((item) => (
-                <a 
+                <a
                     key={item.href}
                     href={item.href}
                     className="navigation-link"
+                    onClick={onNavigate}
                 >
                     {t(item.labelKey)}
                 </a>

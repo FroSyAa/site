@@ -1,7 +1,9 @@
 {
     "header": {
         "brand": "BlankPortfolio",
-        "login": "Авторизация"
+        "login": "Авторизация",
+        "openMenu": "Открыть меню",
+        "closeMenu": "Закрыть меню"
     },
     "navigation": {
         "aboutMe": "Обо мне",

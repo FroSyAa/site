@@ -20,8 +20,9 @@
 
     &__visual {
         position: relative;
-        width: 100%;
-        height: 100%;
+        width: fluid(720, 380);
+        aspect-ratio: 1 / 1;
+        margin-inline: auto;
     }
 
     &__h1 {
@@ -58,13 +59,14 @@
     }
 }
 
-@media (max-width: rem(900)) {
+@include tablet {
     .hero {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
 
-        &__visual {
-            width: min(rem(360), 82vw);
+        &__content {
+            padding-left: 0;
+            margin-inline: auto;
         }
     }
 }

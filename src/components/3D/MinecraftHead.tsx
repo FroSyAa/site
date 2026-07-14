@@ -6,9 +6,9 @@ import { getGlobalPointer } from "../../hooks/useGlobalPointer"
 
 const MODEL_PATH = '/3D-models/MinecraftHead.glb'
 
-const ROTATION_STRENGTH = 1.3
+const ROTATION_STRENGTH = 1.25
 const LOOK_DISTANCE = 1.9
-const ROTATION_SMOOTHING = 0.075
+const ROTATION_SMOOTHING = 0.15
 
 export default function MinecraftHead() {
     const { scene } = useGLTF(MODEL_PATH)
@@ -40,7 +40,7 @@ export default function MinecraftHead() {
                 material.polygonOffsetUnits = -1
 
                 if (material.map) {
-                    material.map.anisotropy = 7
+                    material.map.anisotropy = 6
                     material.map.needsUpdate = true
                 }
             })
@@ -64,7 +64,7 @@ export default function MinecraftHead() {
         modelRef.current.quaternion.slerp(dummy.quaternion, ROTATION_SMOOTHING)
     })
 
-    return <primitive object={model} ref={modelRef} scale={5.0} />
+    return <primitive object={model} ref={modelRef} scale={6.2} />
 }
 
 useGLTF.preload(MODEL_PATH)
