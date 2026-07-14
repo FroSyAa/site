@@ -1,0 +1,35 @@
+@use '../../shared/helpers/' as *;
+
+.skills {
+    background: var(--color-dark-1);
+    min-height: rem(720);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 4%;
+
+    &__hard-skills {
+        
+    }
+
+    &__soft-skills {
+
+    }
+
+    &__h1 {
+        margin: 0;
+        font-family: var(--font-family-accent);
+        font-size: rem(52);
+        text-align: center;
+        color: var(--color-purple);
+    }
+
+    &__h3 {
+        margin: 0;
+        font-size: rem(22);
+        color: var(--color-light-purple);
+        font-family: var(--font-family-base);
+        text-align: justify;
+    }
+}

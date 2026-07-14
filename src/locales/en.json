@@ -20,36 +20,42 @@
     "hero": {
         "hello": "Hello!",
         "me": "I'm ",
-        "name": "Blank!",
+        "name": "Nikita!",
         "firstMessage": "Fullstack developer",
         "secondMessage": "I can develop your project",
         "thirdMessage": "I bring your ideas to life in code!"
     },
     "aboutMe": {
         "title": "About Me",
-        "me": "My name Nikita Shipunov, I'm 19 and currently a 3rd-year student at BSTU Voenmeh.",
+        "me": "My name is Nikita Shipunov, I'm 19 and currently a 3rd-year student at BSTU \"Voenmeh\".",
         "firstText": "A backend developer at heart (frontend developer by appearance) and a clean architecture enthusiast.",
-        "secondText": "In programming, I value system integrity and elegance; in life, I appreciate creative approaches and complex mechanics. Whether it's building intricate modpacks in Minecraft with Avarita or automating production chains in sandbox games — I thrive on processes where simple building blocks evolve into something complex and fully functional.",
-        "thirdText": "Currently, I'm diving deep into the Node.js ecosystem, as I consider it the perfect blend of flexibility and structure for tackling demanding enterprise challenges. I design and maintain my own projects from scratch, always prioritizing clean architecture and long-term scalability.",
+        "secondText": "In programming, I value system integrity and elegance; in life, I appreciate creative approaches and complex mechanics. Whether it's building intricate modpacks in Minecraft with Avaritia or automating production chains in sandbox games — I thrive on processes where simple building blocks evolve into something complex and fully functional.",
+        "thirdText": "I work with Node.js because I see it as the ideal balance of flexibility and structure for tackling complex challenges. I build my own projects from scratch, with a strong focus on architectural cleanliness and scalability.",
         "photoAlt": "There's a picture of me here"
     },
     "experience": {
         "title": "Experience",
         "items": [
             {
-                "date": "2024 - present",
-                "position": "Backend Developer",
-                "description": "Development of microservices using NestJS, working with Kafka and Redis"
+                "date": "August 2022 — February 2023",
+                "position": "Freelance Developer",
+                "project": "Independent practice — helping students with coursework, theses and pet projects",
+                "summary": "Alongside my studies, I took on freelance work developing and finishing student projects: coursework, thesis programming components, and pet projects.",
+                "description": "While studying, I took on freelance work from fellow students: helped with coursework and thesis projects that had a programming component, picked up and finished other people's code, and built pet and coursework projects from scratch to spec.\n\nTasks ranged widely in scope and stack — from simple lab assignments to small full projects with a database and business logic. It taught me to get up to speed quickly in someone else's code and requirements, explain decisions to a non-technical client (a fellow student, not a developer), and hit deadlines tied to submission dates.\n\nThis is where I really got hooked on development — some of the ideas that later shaped StudBot (including the shared solutions module) grew directly out of this experience."
             },
             {
-                "date": "2023 - 2024",
-                "position": "Fullstack Developer",
-                "description": "Creation of web applications using React and Node.js"
+                "date": "August 2025 — May 2026",
+                "position": "Founder & Lead Backend Developer",
+                "project": "StudBot — Telegram platform for a university",
+                "summary": "Designed and single-handedly built a Telegram platform for students: schedules, a shared solutions base, matchmaking, gamification. Full cycle — from architecture to security and deployment.",
+                "description": "StudBot grew out of wanting to automate and scale my freelance team: by that point I was already taking on orders for coursework, theses, and study projects, and I wanted a tool for intake and task distribution instead of coordinating everything by hand. While building the bot for that, it became clear the university had far more unsolved everyday problems — an inconvenient class schedule, no shared place to exchange solutions to common assignments, a dull student experience with no gamification.\n\nSo the project grew from a team-coordination tool into a multi-module platform for the whole university — with a schedule, personal schedule-card image generation, a solutions base (populated by students themselves who want to share their work), a moderated matchmaking system, achievements, and tools for group leaders.\n\nI ran the project solo: designed the architecture, wrote the backend, worked out the data model, set up deployment, and handled security — from protecting against common web vulnerabilities to controlling load. Some modules (like schedule-image generation) I rewrote along the way — the first version couldn't handle load, the second held up reliably even under concurrent requests.\n\nThe platform keeps growing, and the architecture was designed from the start to be adaptable to other universities.\n\nWhat I took away: end-to-end solo ownership of a product — from \"what the user needs\" to \"how not to bring it down under load.\""
             },
             {
-                "date": "2022 - 2023",
-                "position": "Junior Developer",
-                "description": "Learning web development basics and working on educational projects"
+                "date": "May 2026 — present",
+                "position": "Fullstack Developer (pet project)",
+                "project": "We — an app for couples to spend time together",
+                "summary": "Designing and building the microservice backend for a couples app: Auth Service, User Service, Media Service (S3), event-driven communication over Kafka instead of direct HTTP calls.",
+                "description": "After stepping back from StudBot in May 2026, I started a new pet project — \"We\", an app that helps couples plan and diversify the time they spend together: shared activities, mini-games, geolocation, and other two-person mechanics. This time I'm deliberately building it as a proper microservice architecture rather than a monolith.\n\nSo far I've built an Auth Service, a User Service, and a Media Service backed by S3 for file storage, each with explicit API contracts defined up front. Instead of direct synchronous HTTP calls between services, communication runs through Kafka — so services stay decoupled and resilient to each other's downtime.\n\nFor me the project is mainly a testbed for distributed-systems concerns: service boundaries, contract design, eventual consistency, and object storage integration. The product side (games, geolocation, and the rest) is still being worked out; next up is building out the remaining services."
             }
         ]
     }
