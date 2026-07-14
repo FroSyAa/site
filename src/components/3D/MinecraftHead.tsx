@@ -10,6 +10,9 @@ const ROTATION_STRENGTH = 1.25
 const LOOK_DISTANCE = 1.9
 const ROTATION_SMOOTHING = 0.15
 
+const FLOAT_AMPLITUDE = 0.15
+const FLOAT_SPEED = 1.2
+
 export default function MinecraftHead() {
     const { scene } = useGLTF(MODEL_PATH)
     const model = useMemo(() => scene.clone(true), [scene])
@@ -47,7 +50,7 @@ export default function MinecraftHead() {
         })
     }, [model])
 
-    useFrame(() => {
+    useFrame(({ clock }) => {
         if (!modelRef.current) return
 
         const pointer = getGlobalPointer()
@@ -62,6 +65,7 @@ export default function MinecraftHead() {
         dummy.lookAt(modelRef.current.position.clone().add(target))
 
         modelRef.current.quaternion.slerp(dummy.quaternion, ROTATION_SMOOTHING)
+        modelRef.current.position.y = Math.sin(clock.getElapsedTime() * FLOAT_SPEED) * FLOAT_AMPLITUDE
     })
 
     return <primitive object={model} ref={modelRef} scale={5.5} />
