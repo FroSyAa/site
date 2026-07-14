@@ -11,7 +11,7 @@
     "hero": {
         "hello": "Hello!",
         "me": "I'm ",
-        "name": "Nikita!",
+        "name": "Blank!",
         "firstMessage": "Fullstack developer",
         "secondMessage": "I can develop your project",
         "thirdMessage": "I bring your ideas to life in code!"
@@ -28,8 +28,8 @@
         "title": "Experience",
         "items": [
             {
-                "date": "August 2022 — February 2023",
-                "position": "Freelance Developer",
+                "date": "September 2024 — June 2025",
+                "position": "Freelance Fullstack Developer",
                 "project": "Independent practice — helping students with coursework, theses and pet projects",
                 "summary": "Alongside my studies, I took on freelance work developing and finishing student projects: coursework, thesis programming components, and pet projects.",
                 "description": "While studying, I took on freelance work from fellow students: helped with coursework and thesis projects that had a programming component, picked up and finished other people's code, and built pet and coursework projects from scratch to spec.\n\nTasks ranged widely in scope and stack — from simple lab assignments to small full projects with a database and business logic. It taught me to get up to speed quickly in someone else's code and requirements, explain decisions to a non-technical client (a fellow student, not a developer), and hit deadlines tied to submission dates.\n\nThis is where I really got hooked on development — some of the ideas that later shaped StudBot (including the shared solutions module) grew directly out of this experience."
@@ -112,7 +112,7 @@
     },
     "contacts": {
         "contactTitle": "Let's build something together",
-        "contactText": "Currently open to new opportunities and interesting collaborations.",
+        "contactFirstText": "Currently open to new opportunities and interesting collaborations.",
         "contactSecondText": "Do not hesitate to contact!"
     }
 }
