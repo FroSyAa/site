@@ -30,7 +30,7 @@
         font-family: var(--font-family-accent);
         font-size: fluid(86, 68);
         line-height: 1.2;
-        min-height: calc(fluid(86, 68) * 1.2 * 3);
+        min-height: calc(fluid(86, 68) * 1.2 * 2);
         color: var(--text-heading);
         &__name {
             background: linear-gradient(
