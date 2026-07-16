@@ -8,11 +8,13 @@
     place-items: center;
     padding: rem(20);
     background-color: rgb(0 0 0 / 65%);
-    backdrop-filter: blur(rem(3)); 
+    backdrop-filter: blur(rem(3));
 
     &__content {
         position: relative;
         width: min(rem(520), 100%);
+        max-height: 100%;
+        overflow-y: auto;
         border: rem(1) solid var(--accent);
         border-radius: rem(16);
         background-color: var(--bg-primary);
