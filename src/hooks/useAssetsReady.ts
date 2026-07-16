@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+const SAFETY_TIMEOUT_MS = 4000
+
 function areImagesLoaded() {
     return Array.from(document.images).every((img) => img.complete)
 }
@@ -8,6 +10,7 @@ export function useAssetsReady() {
     const [windowLoaded, setWindowLoaded] = useState(document.readyState === 'complete')
     const [imagesLoaded, setImagesLoaded] = useState(false)
     const [fontsLoaded, setFontsLoaded] = useState(false)
+    const [timedOut, setTimedOut] = useState(false)
 
     useEffect(() => {
         if (windowLoaded) return
@@ -42,5 +45,10 @@ export function useAssetsReady() {
         }
     }, [])
 
-    return windowLoaded && imagesLoaded && fontsLoaded
+    useEffect(() => {
+        const timeoutId = window.setTimeout(() => setTimedOut(true), SAFETY_TIMEOUT_MS)
+        return () => window.clearTimeout(timeoutId)
+    }, [])
+
+    return (windowLoaded && imagesLoaded && fontsLoaded) || timedOut
 }

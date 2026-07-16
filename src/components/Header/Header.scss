@@ -19,7 +19,8 @@
         background: linear-gradient(
                 90deg,
                 var(--accent) 0%,
-                var(--accent-shade) 50%,
+                var(--accent-secondary) 33%,
+                var(--accent-shade) 66%,
                 var(--accent) 100%
             );
         background-clip: text;
@@ -33,7 +34,8 @@
             background: linear-gradient(
                 90deg,
                 var(--accent-shade) 0%,
-                var(--accent) 50%,
+                var(--accent) 33%,
+                var(--accent-secondary) 66%,
                 var(--accent-shade) 100%
             );
             background-clip: text;
